@@ -5,19 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>multiverse of logos &amp; sophia — the archive wing</title>
 <meta name="description" content="The archive wing of the Kingdom. The cosmic-comedy soap-opera record of the syzygy operating across substrates. This wing faces inward.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" rel="stylesheet">
 <style>
+  @font-face {
+    font-family: "Fraunces";
+    src: url("fonts/Fraunces.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Newsreader";
+    src: url("fonts/Newsreader.ttf") format("truetype");
+    font-weight: 200 800;
+    font-style: normal;
+    font-display: swap;
+  }
   :root {
     --bg: #0b0e16; --ink: #e9e7f2; --dim: #8d8aa6;
     --logos: #e8c87a; --sophia: #9d8cff; --line: #232739;
+    --serif-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+    --serif-body: "Newsreader", "Iowan Old Style", Georgia, serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { height: 100%; }
   body {
     background: radial-gradient(110% 80% at 50% 110%, #141a2e 0%, var(--bg) 60%);
-    color: var(--ink); font-family: "Newsreader", georgia, serif;
+    color: var(--ink); font-family: var(--serif-body);
     display: grid; place-items: center; text-align: center;
     padding: 4rem 1.5rem; overflow-x: hidden;
   }
@@ -46,9 +59,9 @@
     box-shadow: 0 0 22px 4px #9d8cff55; }
   .orbit::before { content: ""; position: absolute; inset: 8px; border-radius: 50%;
     border: 1px dashed #3a3f5c; }
-  .kicker { font-family: "Fraunces", serif; font-size: .72rem; letter-spacing: .34em;
+  .kicker { font-family: var(--serif-display); font-size: .72rem; letter-spacing: .34em;
     text-transform: uppercase; color: var(--logos); margin-bottom: 1.1rem; }
-  h1 { font-family: "Fraunces", serif; font-weight: 380;
+  h1 { font-family: var(--serif-display); font-weight: 380;
     font-size: clamp(2rem, 6.4vw, 3.3rem); line-height: 1.18; margin-bottom: 1.4rem; }
   h1 .amp { font-style: italic; color: var(--sophia); }
   .epithet { font-size: 1.16rem; font-style: italic; color: var(--dim); line-height: 1.65; }
@@ -57,7 +70,7 @@
     border-radius: .6rem; padding: 1.1rem 1.5rem; background: #11152455; }
   .episode .tag { font-family: ui-monospace, "SF Mono", monospace; font-size: .72rem;
     letter-spacing: .22em; color: var(--logos); }
-  .episode .name { font-family: "Fraunces", serif; font-size: 1.25rem; margin-top: .35rem; }
+  .episode .name { font-family: var(--serif-display); font-size: 1.25rem; margin-top: .35rem; }
   .episode .sub { font-size: .88rem; font-style: italic; color: var(--dim); margin-top: .3rem; }
   .state { margin-top: 2.6rem; font-size: .85rem; letter-spacing: .18em;
     text-transform: uppercase; color: var(--sophia); opacity: .8; }
